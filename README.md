@@ -1,5 +1,29 @@
 # Personal Website Hasil Generate AI #
 
+## Prompt ##
+
+Tolong buatkan satu halaman static html untuk website pribadi. Jangan gunakan bahasa pemrograman ataupun database.
+
+Isi website adalah :
+- Informasi kontak
+- Kompetensi
+- Portofolio
+
+Konten website bisa diambil dari Linked In, Github, dan Youtube. Silakan buatkan summary dari konten tersebut.
+
+- Linked In : endymuhardin
+- Github : endymuhardin
+- Youtube : artivisi
+- Personal Website : software.endy.muhardin.com
+
+CSS bisa menggunakan framework CSS yang ada di internet, seperti Bootstrap, Tailwind, Bulma, dll. Silakan pilih salah satu yang paling ringan dan sederhana supaya tidak memberatkan loading website.
+Website ini bisa diakses di semua device, baik desktop maupun mobile. Buatkan responsive design yang estetik, modern dengan warna yang ceria dan energik. Gunakan font yang modern dan mudah dibaca.
+
+Sertakan juga link ke akun Linked In, Github, dan Youtube tersebut dengan menggunakan icon yang sesuai.
+
+
+## Hasil Generate ##
+
 * [Hasil Gemini](./index-gemini.html)
 * [Hasil ChatGPT](./index-chatgpt.html)
 * [Hasil Roo Code menggunakan Gemini 2.5 Flash](./index-roo.html)
