@@ -23,6 +23,8 @@
 # Catatan #
 
 * Hasil generate ChatGPT dan Gemini lebih komplit daripada Roo Code secara struktur. Sudah ada link menu, dan hasil visualnya lebih baik.
-* Roo Code tidak mau disuruh membaca konten dari Linked In, Github, dan Youtube. Dia mengajukan alasan privasi.
 * Gemini bisa membaca konten dari Linked In, Github, dan Youtube, membuat summary, dan menampilkannya di halaman web.
 * Image placeholder yang dipasang ChatGPT tidak ada aslinya (404)
+* Roo Code tidak mau disuruh membaca konten dari Linked In, Github, dan Youtube. Dia mengajukan alasan privasi.
+
+![Roo Code Privacy](./images/roo-code-privacy.png)
