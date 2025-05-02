@@ -32,24 +32,31 @@ Sertakan juga link ke akun Linked In, Github, dan Youtube tersebut dengan menggu
 ## Gemini via Web ##
 
 ![Gemini 1](./images/gemini-1.png)
+
 ![Gemini 2](./images/gemini-2.png)
 
 ## ChatGPT via Web ##
 
 ![ChatGPT 1](./images/chatgpt-1.png)
+
 ![ChatGPT 2](./images/chatgpt-2.png)
 
 ## Roo Code dengan Gemini 2.5 Flash ##
 
 ![Roo Code 1](./images/roo-1.png)
+
 ![Roo Code 2](./images/roo-2.png)
 
 ## Claude 3.7 Sonnet ##
 
 ![Claude 1](./images/claude-1.png)
+
 ![Claude 2](./images/claude-2.png)
+
 ![Claude 3](./images/claude-3.png)
+
 ![Claude 4](./images/claude-4.png)
+
 ![Claude 5](./images/claude-5.png)
 
 # Catatan #
