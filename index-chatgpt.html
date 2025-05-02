@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Pribadi</title>
+  <title>Endy Muhardin - Website Pribadi</title>
   <style>
     :root {
       --primary-color: #00796b;
@@ -146,6 +146,10 @@
       transition: background 0.5s;
     }
 
+    .contact-links a button {
+      margin: 5px;
+    }
+
     button, a button {
       padding: 10px;
       background: var(--secondary-color);
@@ -182,10 +186,6 @@
 
     #topBtn:hover { background-color: var(--accent-color); }
 
-    .download-cv { margin-top: 15px; text-align: center; }
-
-    .download-cv a button { width: 200px; }
-
     @media (max-width: 768px) {
       nav ul { flex-direction: column; }
       nav ul li { margin: 10px 0; }
@@ -207,72 +207,55 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <img src="https://source.unsplash.com/150x150/?person,portrait" alt="Foto Profil" class="profile-img">
-        <h1>Endy Muhardin</h1>
-        <p>Pakar Software Development dan Open Source Enthusiast</p>
-        <div class="social-icons">
-          <a href="https://linkedin.com/in/endymuhardin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/endymuhardin" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://youtube.com/@artivisi" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-      </header>
-    
-      <nav>
-        <ul>
-          <li><a href="#kontak">Kontak</a></li>
-          <li><a href="#kompetensi">Kompetensi</a></li>
-          <li><a href="#portofolio">Portofolio</a></li>
-        </ul>
-      </nav>
-
-    
-      <section id="kompetensi">
-        <h2>Kompetensi</h2>
-        <ul>
-          <li>Pengembangan Website (HTML, CSS, JavaScript)</li>
-          <li>Pemrograman Java dan Spring Framework</li>
-          <li>Pemrograman Python untuk Analisis Data</li>
-          <li>Manajemen Proyek, Agile Methodology & DevOps</li>
-          <li>Pemanfaatan Open Source untuk Solusi Enterprise</li>
-          <li>Bahasa Inggris - Tingkat Lanjut</li>
-        </ul>
-      </section>
-    
-      <section id="portofolio">
-        <h2>Portofolio</h2>
-        <p>Melalui kanal-kanal media sosial, Endy Muhardin aktif berbagi pengetahuan seputar software engineering, seperti pengembangan aplikasi enterprise dengan Java dan Spring Framework, DevOps, serta penerapan praktik terbaik dalam dunia IT.</p>
-        <ul>
-          <li><strong>LinkedIn:</strong> Berbagi insight tentang manajemen proyek IT, pengembangan software skala besar, dan praktik DevOps.</li>
-          <li><strong>GitHub:</strong> Koleksi proyek open source, template aplikasi Spring Boot, integrasi software, dan contoh implementasi DevOps pipeline.</li>
-          <li><strong>YouTube:</strong> Tutorial video tentang pengembangan aplikasi Java, otomasi DevOps, dan penerapan teknologi open source.</li>
-        </ul>
-    
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <img src="https://source.unsplash.com/300x200/?website" alt="Contoh Proyek 1">
-            <h3>Proyek Website Perusahaan</h3>
-            <p>Mengembangkan website profil perusahaan menggunakan HTML, CSS, dan JavaScript untuk klien di bidang manufaktur.</p>
-          </div>
-          <div class="portfolio-item">
-            <img src="https://source.unsplash.com/300x200/?data" alt="Contoh Proyek 2">
-            <h3>Dashboard Analisis Data</h3>
-            <p>Membangun dashboard interaktif untuk visualisasi data menggunakan Python dan Plotly.</p>
-          </div>
-          <div class="portfolio-item">
-            <img src="https://source.unsplash.com/300x200/?design" alt="Contoh Proyek 3">
-            <h3>Desain Poster Acara</h3>
-            <p>Membuat desain poster digital untuk acara seminar teknologi dengan Adobe Illustrator.</p>
-          </div>
-        </div>
-      </section>
-    
-      <button id="topBtn" title="Kembali ke Atas"><i class="fas fa-arrow-up"></i></button>
-    
-      <footer>
-        <p>&copy; 2025 Endy Muhardin</p>
-      </footer>
-    
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+    <h1>Endy Muhardin</h1>
+    <p>Software Architect, Trainer, Konsultan IT</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/endymuhardin" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/endymuhardin" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.youtube.com/@artivisi" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#kompetensi">Kompetensi</a></li>
+      <li><a href="#portofolio">Portofolio</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+  <section id="kompetensi">
+    <h2>Kompetensi</h2>
+    <ul>
+      <li>Arsitektur Perangkat Lunak berbasis Java dan Spring Framework</li>
+      <li>Microservices, DevOps, CI/CD, dan Docker</li>
+      <li>Trainer dan Konsultan Agile, Clean Code, dan Software Design</li>
+      <li>Pengembangan Aplikasi Enterprise berbasis Open Source</li>
+    </ul>
+  </section>
+  <section id="portofolio">
+    <h2>Portofolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/featured/?technology" alt="Proyek 1">
+        <h3>Aplikasi Enterprise untuk Perbankan</h3>
+        <p>Mendesain dan mengembangkan aplikasi core banking menggunakan Java, Spring Boot, dan microservices architecture.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/featured/?coding" alt="Proyek 2">
+        <h3>Pelatihan dan Konsultasi IT</h3>
+        <p>Menyelenggarakan berbagai pelatihan di bidang arsitektur software, clean code, dan DevOps untuk perusahaan nasional.</p>
+      </div>
+    </div>
+  </section>
+  <section class="contact-links" id="kontak" style="text-align:center">
+    <h2>Kontak</h2>
+    <a href="https://wa.me/6281298000468" target="_blank"><button>Hubungi via WhatsApp</button></a>
+    <a href="mailto:endy.muhardin@gmail.com"><button>Kirim Email</button></a>
+  </section>
+  <footer>
+    &copy; 2025 Endy Muhardin | Website Pribadi
+  </footer>
   <button id="topBtn" title="Kembali ke atas">
     <i class="fas fa-arrow-up"></i>
   </button>
