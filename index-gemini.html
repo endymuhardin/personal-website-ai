@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pribadi - Endy Muhardin</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@latest/css/pico.min.css"/>
+
+    <style>
+        /* Membuat gambar profil menjadi bulat */
+        .profile-pic {
+            display: block; /* Agar margin auto bekerja */
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Membuat gambar bulat */
+            margin: 1rem auto; /* Tengah secara horizontal, dengan margin atas/bawah */
+            object-fit: cover; /* Pastikan gambar menutupi area tanpa distorsi */
+        }
+
+        /* Styling tambahan untuk item portofolio dalam grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Sedikit lebih lebar */
+            gap: 1.5rem; /* Jarak antar item */
+        }
+
+        /* Beri sedikit style pada item portofolio agar tampak seperti card mini */
+        .portfolio-item {
+            border: 1px solid var(--pico-card-border-color, #dcdcdc); /* Gunakan variabel Pico jika ada, fallback ke abu-abu */
+            padding: 1rem;
+            border-radius: var(--pico-border-radius, 0.25rem);
+            background-color: var(--pico-card-background-color, #ffffff);
+            text-align: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .portfolio-item:hover {
+             transform: translateY(-3px);
+             box-shadow: var(--pico-card-box-shadow, 0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--pico-border-radius); /* Sesuaikan radius */
+            margin-bottom: 1rem;
+        }
+        .portfolio-item h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem; /* Kurangi margin bawah h3 */
+            font-size: 1.1em;
+        }
+         .portfolio-item p:not(:last-of-type) { /* Beri margin bawah pada paragraf deskripsi */
+            margin-bottom: 1rem;
+         }
+         /* Pastikan tombol/link portofolio tetap terlihat jelas */
+         .portfolio-item a[role="button"] {
+            margin-top: 1rem; /* Beri jarak dari teks */
+         }
+
+        /* Atur lebar label kontak agar lebih rapi */
+         #kontak li strong {
+            display: inline-block;
+            width: 70px; /* Sesuaikan lebar label */
+            font-weight: var(--pico-font-weight-bold); /* Gunakan font weight dari Pico */
+         }
+         #kontak li {
+            margin-bottom: 0.75rem; /* Sedikit kurangi jarak antar item kontak */
+         }
+
+         /* Header styling */
+         header.container > div { /* Menggunakan flexbox untuk header */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Pusatkan item */
+            text-align: center; /* Pusatkan teks */
+            padding-bottom: 1rem; /* Beri jarak sebelum navigasi */
+         }
+
+          /* Navigasi agar lebih menonjol sedikit */
+         nav {
+            background-color: var(--pico-muted-background-color); /* Warna latar belakang lembut */
+            padding: 0.5rem 0;
+            border-radius: var(--pico-border-radius);
+            margin-top: 1rem; /* Jarak dari header */
+         }
+         nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+         }
+         nav ul li {
+            display: inline-block; /* Navigasi horizontal */
+            margin: 0 1rem;
+         }
+         nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: var(--pico-primary-focus); /* Warna link yang lebih menonjol */
+         }
+          nav ul li a:hover {
+             color: var(--pico-primary-hover);
+          }
+
+         /* Footer styling */
+         footer {
+            margin-top: 2rem;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.9em;
+            color: var(--pico-muted-color); /* Warna teks yang lembut */
+            border-top: 1px solid var(--pico-muted-border-color);
+         }
+
+        /* Media query untuk layar kecil */
+         @media (max-width: 768px) {
+             header.container > div {
+                 flex-direction: column; /* Tetap kolom di mobile */
+                 align-items: center;
+             }
+             .profile-pic {
+                width: 120px; /* Kecilkan foto profil di mobile */
+                height: 120px;
+             }
+             h1 {
+                font-size: 2em; /* Kecilkan H1 di mobile */
+             }
+             #kontak li strong {
+                display: block; /* Tumpuk label di atas link */
+                width: auto;
+                margin-bottom: 3px;
+             }
+             #kontak li {
+                margin-bottom: 1rem; /* Beri jarak lebih antar item kontak */
+             }
+              nav ul li {
+                margin: 0 0.5rem; /* Kurangi jarak nav item */
+             }
+         }
+
+    </style>
+</head>
+<body>
+
+    <header class="container">
+         <div>
+            <img src="https://picsum.photos/seed/endymuhardin/150/150" alt="Foto Profil Endy Muhardin" class="profile-pic">
+            <h1>Endy Muhardin</h1> <p>Seorang Software Engineer & Content Creator</p> </div>
+        <nav>
+            <ul>
+                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="#kompetensi">Kompetensi</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <article id="kontak">
+            <hgroup> <h2>Kontak & Profil Online</h2>
+                <p>Terhubung dengan saya melalui channel berikut:</p>
+             </hgroup>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:endy.muhardin@example.com">endy.muhardin@example.com</a></li>
+                <li><strong>Telepon:</strong> +62 812 0000 0000</li>
+                <li><strong>Lokasi:</strong> Sukaraja, Indonesia</li>
+                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/endymuhardin" target="_blank" rel="noopener noreferrer">linkedin.com/in/endymuhardin</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/endymuhardin" target="_blank" rel="noopener noreferrer">github.com/endymuhardin</a></li>
+                <li><strong>GitLab:</strong> <a href="https://gitlab.com/endymuhardin" target="_blank" rel="noopener noreferrer">gitlab.com/endymuhardin</a></li>
+                <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@artivisi" target="_blank" rel="noopener noreferrer">Channel Artivisi</a></li>
+            </ul>
+        </article>
+
+        <article id="kompetensi">
+            <hgroup>
+                <h2>Kompetensi Utama</h2>
+                <p>Beberapa area keahlian yang saya kuasai:</p>
+            </hgroup>
+             <ul>
+                <li>Pengembangan Back-End (Java, Spring Boot, Go)</li>
+                <li>Arsitektur Microservices & Domain-Driven Design (DDD)</li>
+                <li>Containerization & Orchestration (Docker, Kubernetes)</li>
+                <li>Cloud Platforms (AWS, GCP)</li>
+                <li>Database Management (PostgreSQL, MySQL, MongoDB)</li>
+                <li>CI/CD Implementation (Jenkins, GitLab CI, Argo CD)</li>
+                <li>Observability (Prometheus, Grafana, ELK Stack)</li>
+                <li>Agile Development & Scrum</li>
+                 <li>Pembuatan Konten Teknis (Blog, Video Tutorial)</li>
+            </ul>
+            </article>
+
+        <article id="portofolio">
+             <hgroup>
+                <h2>Portofolio Pilihan</h2>
+                <p>Contoh proyek dan kontribusi yang pernah saya lakukan:</p>
+            </hgroup>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                     <img src="https://picsum.photos/seed/project1/300/200" alt="Proyek Sistem Pembayaran">
+                    <h3>Sistem Pembayaran Online</h3>
+                    <p>Pengembangan backend microservice untuk fitur pembayaran menggunakan Java, Spring Boot, dan integrasi Kafka.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" role="button" class="outline">Lihat Detail</a> </div>
+
+                <div class="portfolio-item">
+                     <img src="https://picsum.photos/seed/project2/300/200" alt="Proyek Platform Edukasi">
+                    <h3>Platform E-Learning Skalabel</h3>
+                    <p>Merancang dan mengimplementasikan arsitektur berbasis event untuk modul kursus dan pengguna.</p>
+                     <a href="#" target="_blank" rel="noopener noreferrer" role="button" class="outline">Studi Kasus</a>
+                      </div>
+
+                <div class="portfolio-item">
+                    <img src="https://picsum.photos/seed/project3/300/200" alt="Proyek CI/CD Pipeline">
+                    <h3>Automasi CI/CD Kubernetes</h3>
+                    <p>Membangun pipeline otomatis untuk build, test, security scan, dan deployment ke GKE menggunakan GitLab CI & Argo CD.</p>
+                     <a href="#" target="_blank" rel="noopener noreferrer" role="button" class="outline">Konfigurasi Repo</a>
+                    </div>
+                 </div>
+        </article>
+
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2025 Endy Muhardin - Dibuat dengan HTML & Pico.css</p>
+    </footer>
+
+</body>
+</html>

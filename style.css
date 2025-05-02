@@ -1,0 +1,36 @@
+/* Custom styles */
+body {
+    padding-top: 0; /* Adjust if using a fixed navbar */
+}
+
+#contact-info .list-group-item {
+    border: none;
+    padding-left: 0;
+}
+
+#contact-info a {
+    text-decoration: none;
+}
+
+#competencies .card-title {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+#portfolio .card-img-top {
+    height: 200px; /* Fixed height for portfolio images */
+    object-fit: cover; /* Cover the area without distorting aspect ratio */
+}
+
+#contact-form .btn-success {
+    background-color: #28a745; /* Bootstrap success color */
+    border-color: #28a745;
+}
+
+#contact-form .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+footer {
+    margin-top: 30px;
+}
