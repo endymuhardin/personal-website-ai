@@ -54,6 +54,7 @@ Sertakan juga link ke akun Linked In, Github, dan Youtube tersebut dengan menggu
 
 # Catatan #
 
+* Hasil Claude 3.7 Sonnet paling oke, jauh melebihi AI yang lain.
 * Hasil generate ChatGPT dan Gemini lebih komplit daripada Roo Code secara struktur. Sudah ada link menu, dan hasil visualnya lebih baik.
 * Gemini bisa membaca konten dari Linked In, Github, dan Youtube, membuat summary, dan menampilkannya di halaman web.
 * Image placeholder yang dipasang ChatGPT tidak ada aslinya (404)
