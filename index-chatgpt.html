@@ -1,255 +1,272 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Endy Muhardin - Website Pribadi</title>
-  <meta name="description" content="Website pribadi Endy Muhardin, Software Architect, Trainer, dan Konsultan IT. Berisi portofolio, kompetensi, dan kontak.">
-  <meta name="author" content="Endy Muhardin">
-  <meta property="og:title" content="Endy Muhardin - Website Pribadi">
-  <meta property="og:description" content="Website pribadi Endy Muhardin, Software Architect, Trainer, dan Konsultan IT.">
-  <meta property="og:image" content="https://via.placeholder.com/300">
-  <meta property="og:url" content="https://endymuhardin.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <style>
-    :root {
-      --primary-color: #1abc9c;
-      --secondary-color: #2980b9;
-      --text-color: #ecf0f1;
-      --bg-color: #121212;
-      --accent-color: #16a085;
-    }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-    }
-    header, nav, section, footer {
-      padding: 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    header {
-      text-align: center;
-    }
-    .profile-img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border: 4px solid var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      gap: 1rem;
-    }
-    nav a {
-      color: var(--text-color);
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      background: var(--primary-color);
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background: var(--accent-color);
-    }
-    h2 {
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.3rem;
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-    .portfolio-item {
-      background: var(--bg-color);
-      border: 2px solid var(--primary-color);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s, background 0.3s, border 0.3s;
-    }
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-    }
-    .portfolio-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .portfolio-item h3 {
-      margin: 0.5rem;
-      color: var(--secondary-color);
-    }
-    .portfolio-item p {
-      margin: 0.5rem;
-      color: var(--text-color);
-    }
-    .contact-links a button {
-      background: var(--primary-color);
-      border: none;
-      color: var(--text-color);
-      padding: 0.5rem 1rem;
-      margin: 0.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .contact-links a button:hover {
-      background: var(--accent-color);
-    }
-    .social-icons a {
-      margin: 0 0.5rem;
-      color: var(--primary-color);
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-    .social-icons a:hover {
-      color: var(--accent-color);
-    }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #7f8c8d;
-    }
-    #topBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 99;
-      border: none;
-      outline: none;
-      background-color: var(--primary-color);
-      color: white;
-      cursor: pointer;
-      padding: 0.7rem;
-      border-radius: 50%;
-      transition: background 0.3s;
-    }
-    #topBtn:hover {
-      background-color: var(--accent-color);
-    }
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--primary-color);
-      color: var(--text-color);
-      border: none;
-      padding: 0.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-      z-index: 999;
-      transition: background 0.3s;
-    }
-    .theme-toggle:hover {
-      background: var(--accent-color);
-    }
-    .light-mode {
-      --bg-color: #ffffff;
-      --text-color: #2c3e50;
-      --primary-color: #16a085;
-      --secondary-color: #2980b9;
-      --accent-color: #1abc9c;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endy Muhardin - Website Pribadi</title>
+    <meta name="description" content="Website pribadi Endy Muhardin, Software Architect, Trainer, dan Konsultan IT. Berisi portofolio, kompetensi, dan kontak.">
+    <meta name="author" content="Endy Muhardin">
+    <meta property="og:title" content="Endy Muhardin - Website Pribadi">
+    <meta property="og:description" content="Website pribadi Endy Muhardin, Software Architect, Trainer, dan Konsultan IT.">
+    <meta property="og:image" content="https://via.placeholder.com/300">
+    <meta property="og:url" content="https://endymuhardin.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #1abc9c;
+        --secondary-color: #2980b9;
+        --text-color: #ecf0f1;
+        --bg-color: #121212;
+        --accent-color: #16a085;
+      }
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+      }
+      header, nav, section, footer {
+        padding: 1rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+      header {
+        text-align: center;
+      }
+      .profile-img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 4px solid var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        gap: 1rem;
+      }
+      nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        background: var(--primary-color);
+        transition: background 0.3s;
+      }
+      nav a:hover {
+        background: var(--accent-color);
+      }
+      h2 {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 0.3rem;
+      }
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+      }
+      .portfolio-item {
+        background: var(--bg-color);
+        border: 2px solid var(--primary-color);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        transition: transform 0.3s, background 0.3s, border 0.3s;
+      }
+      .portfolio-item:hover {
+        transform: translateY(-5px);
+      }
+      .portfolio-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .portfolio-item h3 {
+        margin: 0.5rem;
+        color: var(--secondary-color);
+      }
+      .portfolio-item p {
+        margin: 0.5rem;
+        color: var(--text-color);
+      }
+      .contact-links a button {
+        background: var(--primary-color);
+        border: none;
+        color: var(--text-color);
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .contact-links a button:hover {
+        background: var(--accent-color);
+      }
+      .social-icons a {
+        margin: 0 0.5rem;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        transition: color 0.3s;
+      }
+      .social-icons a:hover {
+        color: var(--accent-color);
+      }
+      footer {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #7f8c8d;
+      }
+      #topBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: var(--primary-color);
+        color: white;
+        cursor: pointer;
+        padding: 0.7rem;
+        border-radius: 50%;
+        transition: background 0.3s;
+      }
+      #topBtn:hover {
+        background-color: var(--accent-color);
+      }
+      .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--primary-color);
+        color: var(--text-color);
+        border: none;
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 999;
+        transition: background 0.3s;
+        font-size: 1.2rem;
+      }
+      .theme-toggle:hover {
+        background: var(--accent-color);
+      }
+      .light-mode {
+        --bg-color: #ffffff;
+        --text-color: #2c3e50;
+        --primary-color: #16a085;
+        --secondary-color: #2980b9;
+        --accent-color: #1abc9c;
+      }
+    </style>
 </head>
-<body class="dark-mode">
-<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-<header>
-  <img src="https://avatars.githubusercontent.com/endymuhardin" alt="Foto Profil Endy Muhardin" class="profile-img">
-  <h1>Endy Muhardin</h1>
-  <p>Software Architect | Trainer | Konsultan IT</p>
-  <div class="social-icons">
-    <a href="https://linkedin.com/in/endymuhardin" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/endymuhardin" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://youtube.com/@artivisi" target="_blank"><i class="fab fa-youtube"></i></a>
-  </div>
-</header>
-<nav>
-  <ul>
-    <li><a href="#kompetensi">Kompetensi</a></li>
-    <li><a href="#portofolio">Portofolio</a></li>
-    <li><a href="#kontak">Kontak</a></li>
-  </ul>
-</nav>
-<section id="kompetensi" data-aos="fade-up">
-  <h2>Kompetensi</h2>
-  <ul>
-    <li>Software Architecture: Microservices, Monolith, Modular Design</li>
-    <li>Enterprise Java: Spring Boot, Jakarta EE</li>
-    <li>Frontend: React.js, Angular</li>
-    <li>DevOps: Docker, Kubernetes, CI/CD pipelines</li>
-    <li>Cloud: AWS, Google Cloud, DigitalOcean</li>
-    <li>Training dan Coaching pengembangan aplikasi enterprise</li>
-  </ul>
-</section>
-<section id="portofolio" data-aos="fade-up">
-  <h2>Portofolio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/600x400" alt="Proyek 1">
-      <h3>Implementasi Sistem Informasi Rumah Sakit</h3>
-      <p>Mengembangkan sistem informasi terintegrasi untuk manajemen rumah sakit skala nasional.</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/600x400" alt="Proyek 2">
-      <h3>Training Spring Boot untuk Developer Enterprise</h3>
-      <p>Menyelenggarakan pelatihan intensif pengembangan aplikasi enterprise menggunakan Spring Boot.</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/600x400" alt="Proyek 3">
-      <h3>Automasi DevOps dengan Docker dan Kubernetes</h3>
-      <p>Mendesain pipeline CI/CD dan automasi deployment untuk aplikasi cloud-native.</p>
-    </div>
-  </div>
-</section>
-<section id="kontak" data-aos="fade-up">
-  <h2>Kontak</h2>
-  <p>Hubungi saya melalui WhatsApp atau email berikut:</p>
-  <div class="contact-links">
-    <a href="https://wa.me/6281298000468" target="_blank"><button><i class="fab fa-whatsapp"></i> WhatsApp</button></a>
-    <a href="mailto:endy.muhardin@gmail.com"><button><i class="fas fa-envelope"></i> Email</button></a>
-  </div>
-</section>
-<footer>
-  <p>&copy; 2025 Endy Muhardin. Semua hak dilindungi.</p>
-</footer>
-<button onclick="topFunction()" id="topBtn" title="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true });
+<body>
+    <button class="theme-toggle" id="toggleTheme" aria-label="Toggle Dark/Light Mode">🌙</button>
 
-  const topBtn = document.getElementById("topBtn");
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
-  };
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
-  function toggleTheme() {
-    document.body.classList.toggle("light-mode");
-  }
-</script>
+    <header>
+      <h1>Endy Muhardin</h1>
+      <p>Praktisi Software Engineering • Konsultan IT • Content Creator</p>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="#kompetensi">Kompetensi</a></li>
+        <li><a href="#portofolio">Portofolio</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+    
+    <section id="kompetensi">
+      <h2>Kompetensi</h2>
+      <ul>
+        <li>Pengembangan aplikasi enterprise (Java, Spring, Jakarta EE)</li>
+        <li>Arsitektur perangkat lunak (Microservices, Cloud-native)</li>
+        <li>CI/CD dan DevOps (Docker, Kubernetes, GitHub Actions)</li>
+        <li>Pelatihan dan konsultasi teknologi informasi</li>
+      </ul>
+    </section>
+    
+    <section id="portofolio">
+      <h2>Portofolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/400x250" alt="Proyek 1">
+          <h3>Implementasi Sistem ERP</h3>
+          <p>Custom ERP berbasis Java untuk manufaktur nasional.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/400x250" alt="Proyek 2">
+          <h3>Integrasi Payment Gateway</h3>
+          <p>Integrasi layanan pembayaran untuk e-commerce skala besar.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/400x250" alt="Proyek 3">
+          <h3>Channel YouTube Artivisi</h3>
+          <p>Konten edukasi tentang pemrograman, DevOps, dan teknologi cloud.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <div class="contact-links">
+        <button onclick="window.open('https://wa.me/6281298000468')">Kirim WhatsApp</button>
+        <button onclick="window.location.href='mailto:endy.muhardin@gmail.com'">Kirim Email</button>
+      </div>
+    </section>
+    
+    <footer>
+      <p>Terhubung dengan saya:</p>
+      <a href="https://linkedin.com/in/endymuhardin" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/endymuhardin" target="_blank">GitHub</a> |
+      <a href="https://youtube.com/@artivisi" target="_blank">YouTube</a>
+      <p>&copy; 2025 Endy Muhardin</p>
+    </footer>
+    
+    <button onclick="topFunction()" id="topBtn" title="Ke atas">⬆️</button>
+    
+    <script>
+      // Dark/light mode toggle
+      const toggleBtn = document.getElementById('toggleTheme');
+      toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+      });
+    
+      // Scroll to top
+      const topBtn = document.getElementById("topBtn");
+      window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          topBtn.style.display = "block";
+        } else {
+          topBtn.style.display = "none";
+        }
+      };
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    
+      // Scroll reveal
+      ScrollReveal().reveal('section', {
+        distance: '50px',
+        duration: 800,
+        easing: 'ease-out',
+        origin: 'bottom',
+        interval: 100
+      });
+    </script>
+    
+    </body>
 </body>
 </html>
