@@ -44,6 +44,14 @@ Sertakan juga link ke akun Linked In, Github, dan Youtube tersebut dengan menggu
 ![Roo Code 1](./images/roo-1.png)
 ![Roo Code 2](./images/roo-2.png)
 
+## Claude 3.7 Sonnet ##
+
+![Claude 1](./images/claude-1.png)
+![Claude 2](./images/claude-2.png)
+![Claude 3](./images/claude-3.png)
+![Claude 4](./images/claude-4.png)
+![Claude 5](./images/claude-5.png)
+
 # Catatan #
 
 * Hasil generate ChatGPT dan Gemini lebih komplit daripada Roo Code secara struktur. Sudah ada link menu, dan hasil visualnya lebih baik.

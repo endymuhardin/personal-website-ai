@@ -1,0 +1,586 @@
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Simple JavaScript for functionality -->
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endy Muhardin - Personal Website</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #3b82f6, #2dd4bf);
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header / Hero Section -->
+    <header class="gradient-bg text-white min-h-[70vh] flex items-center">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Endy Muhardin</h1>
+                    <h2 class="text-xl md:text-2xl mb-6">Software Engineer & Developer Advocate</h2>
+                    <p class="text-lg mb-8">
+                        Passionate about software development, open source, and sharing knowledge with the community. 
+                        Specializing in Java, Spring Framework, and modern web technologies.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition duration-300">Hubungi Saya</a>
+                        <a href="#portfolio" class="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-blue-600 transition duration-300">Lihat Portofolio</a>
+                        <a href="https://wa.me/6281298000468" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full font-medium hover:bg-green-600 transition duration-300 flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="/api/placeholder/400/400" alt="Endy Muhardin" class="rounded-full h-64 w-64 object-cover border-4 border-white shadow-lg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tentang Saya -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Tentang Saya</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4">Latar Belakang</h3>
+                    <p class="text-gray-700 mb-4">
+                        Saya adalah software engineer berpengalaman dengan lebih dari 15 tahun di industri teknologi. Saat ini saya menjabat sebagai CEO di ArtiVisi Intermedia, perusahaan yang fokus pada pengembangan aplikasi berbasis Java dan Spring Framework.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Selain mengembangkan software, saya aktif membagikan pengetahuan melalui kanal YouTube ArtiVisi, blog, dan berbagai workshop serta training.
+                    </p>
+                    <p class="text-gray-700">
+                        Saya percaya pada kekuatan open source dan terus berkontribusi pada berbagai proyek untuk memajukan ekosistem developer di Indonesia.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Pendidikan & Pengalaman</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-blue-500 text-white p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">CEO & Founder</h4>
+                                <p class="text-gray-600">ArtiVisi Intermedia</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-500 text-white p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Computer Science</h4>
+                                <p class="text-gray-600">Institut Teknologi Bandung</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-500 text-white p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Certified Spring Professional</h4>
+                                <p class="text-gray-600">VMware/Pivotal</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kompetensi -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Kompetensi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Back-end Development</h3>
+                    <p class="text-gray-600 mb-4">Pengembangan aplikasi server-side dengan teknologi:</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Java & Spring Framework</li>
+                        <li>Hibernate/JPA</li>
+                        <li>Maven & Gradle</li>
+                        <li>RESTful API Design</li>
+                        <li>Microservices Architecture</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Database & Infrastructure</h3>
+                    <p class="text-gray-600 mb-4">Pengelolaan database dan infrastruktur:</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>PostgreSQL & MySQL</li>
+                        <li>MongoDB</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>Linux Server Administration</li>
+                        <li>Cloud Platforms (AWS, GCP)</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+                    <p class="text-gray-600 mb-4">Pengembangan aplikasi web modern:</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>Vue.js & Angular</li>
+                        <li>Responsive Design</li>
+                        <li>Progressive Web Apps</li>
+                        <li>UI/UX Principles</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">DevOps & CI/CD</h3>
+                    <p class="text-gray-600 mb-4">Otomatisasi & penerapan praktik DevOps:</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Git & GitHub Workflows</li>
+                        <li>Jenkins & GitHub Actions</li>
+                        <li>Continuous Integration</li>
+                        <li>Continuous Deployment</li>
+                        <li>Infrastructure as Code</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Training & Mentoring</h3>
+                    <p class="text-gray-600 mb-4">Pengalaman sebagai trainer dan mentor:</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Java Programming</li>
+                        <li>Spring Framework</li>
+                        <li>Software Architecture</li>
+                        <li>Best Practices & Clean Code</li>
+                        <li>YouTube Content Creation</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="card bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Technical Writing</h3>
+                    <p class="text-gray-600 mb-4">Menulis konten teknis berkualitas:</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Blog & Tutorial</li>
+                        <li>Dokumentasi Teknis</li>
+                        <li>Artikel Pengembangan Software</li>
+                        <li>Materi Pelatihan</li>
+                        <li>Best Practices Guide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portofolio -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Portofolio</h2>
+            
+            <!-- GitHub Projects -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i class="fab fa-github text-gray-800 mr-3"></i> GitHub Projects
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">Belajar Spring Boot</h4>
+                            <p class="text-gray-600 mb-4">Repository tutorial dan contoh implementasi Spring Boot untuk pemula hingga tingkat lanjut.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <div class="mr-4"><i class="fas fa-star mr-1"></i> 250+</div>
+                                <div><i class="fas fa-code-branch mr-1"></i> 120+</div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-6 py-3">
+                            <a href="https://github.com/endymuhardin/belajar-spring-boot" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Lihat Project</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">Belajar Angular</h4>
+                            <p class="text-gray-600 mb-4">Tutorial dan contoh aplikasi menggunakan Angular untuk pengembangan aplikasi web modern.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <div class="mr-4"><i class="fas fa-star mr-1"></i> 180+</div>
+                                <div><i class="fas fa-code-branch mr-1"></i> 85+</div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-6 py-3">
+                            <a href="https://github.com/endymuhardin/belajar-angular" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Lihat Project</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">Aplikasi Keuangan</h4>
+                            <p class="text-gray-600 mb-4">Aplikasi pengelolaan keuangan berbasis Java dan Spring dengan fitur lengkap.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <div class="mr-4"><i class="fas fa-star mr-1"></i> 210+</div>
+                                <div><i class="fas fa-code-branch mr-1"></i> 95+</div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-6 py-3">
+                            <a href="https://github.com/endymuhardin" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Lihat Project</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- YouTube Videos -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i class="fab fa-youtube text-red-600 mr-3"></i> YouTube Tutorials
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Video 1 -->
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/225" alt="Spring Boot Tutorial" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <div class="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">Tutorial Spring Boot</h4>
+                            <p class="text-gray-600 mb-4">Seri video lengkap belajar Spring Boot dari dasar hingga mahir.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <div class="mr-4"><i class="fas fa-eye mr-1"></i> 50K+ views</div>
+                                <div><i class="fas fa-thumbs-up mr-1"></i> 3K+</div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-6 py-3">
+                            <a href="https://www.youtube.com/c/artivisi" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Tonton Seri Video</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/225" alt="DevOps Tutorial" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <div class="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">DevOps untuk Pemula</h4>
+                            <p class="text-gray-600 mb-4">Seri tutorial implementasi Docker, CI/CD dan praktik DevOps modern.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <div class="mr-4"><i class="fas fa-eye mr-1"></i> 35K+ views</div>
+                                <div><i class="fas fa-thumbs-up mr-1"></i> 2.2K+</div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-6 py-3">
+                            <a href="https://www.youtube.com/c/artivisi" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Tonton Seri Video</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 3 -->
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/225" alt="Database Tutorial" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                                <div class="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">Database Design</h4>
+                            <p class="text-gray-600 mb-4">Tutorial perancangan database yang baik dan benar untuk aplikasi skala besar.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <div class="mr-4"><i class="fas fa-eye mr-1"></i> 28K+ views</div>
+                                <div><i class="fas fa-thumbs-up mr-1"></i> 1.8K+</div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 px-6 py-3">
+                            <a href="https://www.youtube.com/c/artivisi" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Tonton Seri Video</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proyek Pelatihan -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-graduation-cap text-purple-600 mr-3"></i> Training & Workshop
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Training 1 -->
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">Java Masterclass</h4>
+                            <p class="text-gray-600 mb-4">Workshop intensif Java programming untuk pengembang dengan pengalaman 100+ peserta.</p>
+                            <ul class="text-gray-700 space-y-2 mb-4">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Core Java & OOP</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Clean Code Practices</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Design Patterns</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Testing & TDD</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Training 2 -->
+                    <div class="card bg-white rounded-lg border border-gray-200 overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2">Enterprise Application Development</h4>
+                            <p class="text-gray-600 mb-4">Pelatihan pengembangan aplikasi enterprise berbasis Spring Framework.</p>
+                            <ul class="text-gray-700 space-y-2 mb-4">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Spring Boot Fundamentals</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Database Integration</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> RESTful API Development</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Security & Authentication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Informasi Kontak</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8 text-gray-800">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-6">Hubungi Saya</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="text-blue-500 text-xl mr-4">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Email</h4>
+                                        <p>endy.muhardin@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="text-blue-500 text-xl mr-4">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">WhatsApp</h4>
+                                        <p><a href="https://wa.me/6281298000468" target="_blank" class="text-blue-600 hover:underline">+62 812-9800-0468</a></p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="text-blue-500 text-xl mr-4">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Lokasi</h4>
+                                        <p>Jakarta, Indonesia</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="text-blue-500 text-xl mr-4">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Perusahaan</h4>
+                                        <p>ArtiVisi Intermedia</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="text-blue-500 text-xl mr-4">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Website</h4>
+                                        <p><a href="https://software.endy.muhardin.com" target="_blank" class="text-blue-600 hover:underline">software.endy.muhardin.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-6">Media Sosial</h3>
+                            <div class="grid grid-cols-3 gap-4">
+                                <a href="https://linkedin.com/in/endymuhardin" target="_blank" class="social-icon flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg">
+                                    <i class="fab fa-linkedin text-3xl text-blue-600 mb-2"></i>
+                                    <span class="text-sm font-medium">LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/endymuhardin" target="_blank" class="social-icon flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg">
+                                    <i class="fab fa-github text-3xl text-gray-800 mb-2"></i>
+                                    <span class="text-sm font-medium">GitHub</span>
+                                </a>
+                                <a href="https://youtube.com/c/artivisi" target="_blank" class="social-icon flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg">
+                                    <i class="fab fa-youtube text-3xl text-red-600 mb-2"></i>
+                                    <span class="text-sm font-medium">YouTube</span>
+                                </a>
+                                <a href="https://twitter.com/endymuhardin" target="_blank" class="social-icon flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg">
+                                    <i class="fab fa-twitter text-3xl text-blue-400 mb-2"></i>
+                                    <span class="text-sm font-medium">Twitter</span>
+                                </a>
+                                <a href="https://wa.me/6281298000468" target="_blank" class="social-icon flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg">
+                                    <i class="fab fa-whatsapp text-3xl text-green-500 mb-2"></i>
+                                    <span class="text-sm font-medium">WhatsApp</span>
+                                </a>
+                                <a href="https://endymuhardin.github.io/blog/" target="_blank" class="social-icon flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg">
+                                    <i class="fas fa-blog text-3xl text-green-600 mb-2"></i>
+                                    <span class="text-sm font-medium">Blog</span>
+                                </a>
+                                <a href="https://software.endy.muhardin.com" target="_blank" class="social-icon flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg">
+                                    <i class="fas fa-globe text-3xl text-purple-600 mb-2"></i>
+                                    <span class="text-sm font-medium">Website</span>
+                                </a>
+                                <a href="mailto:endy.muhardin@gmail.com" class="social-icon flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg">
+                                    <i class="fas fa-envelope text-3xl text-orange-500 mb-2"></i>
+                                    <span class="text-sm font-medium">Email</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Endy Muhardin. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com/in/endymuhardin" target="_blank" class="social-icon text-xl hover:text-blue-400">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/endymuhardin" target="_blank" class="social-icon text-xl hover:text-blue-400">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://youtube.com/c/artivisi" target="_blank" class="social-icon text-xl hover:text-blue-400">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/endymuhardin" target="_blank" class="social-icon text-xl hover:text-blue-400">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://wa.me/6281298000468" target="_blank" class="social-icon text-xl hover:text-blue-400">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://software.endy.muhardin.com" target="_blank" class="social-icon text-xl hover:text-blue-400">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
